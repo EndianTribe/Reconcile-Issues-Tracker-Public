@@ -9,7 +9,7 @@ body:
     id: latest-version-confirm
     attributes:
       label: I can confirm that my app is running on the latest build.
-      # description: "Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/"
+      description: "Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/"
       options:
         - label: I swear on pain of the creator's wrath that my app is running on the latest version.
     validations:
