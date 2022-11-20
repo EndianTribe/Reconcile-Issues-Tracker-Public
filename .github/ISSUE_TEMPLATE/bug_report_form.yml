@@ -1,59 +1,62 @@
 name: Bug Report
 description: File a bug report
-title: "[Bug]: PLEASE NAME THIS BUG"
-labels: ["bug"]
+title: "[Bug]: "
+labels: ["bug", "triage"]
 assignees:
-  - EndianTribe
+  - octocat
 body:
-  # - type: markdown
-  #   attributes:
-  #     value: |
-  #       Thanks for taking the time to fill out this bug report!
-  - type: checkboxes
-    id: latest-version-confirm
+  - type: markdown
     attributes:
-      label: I can confirm that my app is running on the latest build.
-      description: "Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/".
-      options:
-        - label: I swear on pain of the creator's wrath that my app is running on the latest version.
-          required: true
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
-  # - type: textarea
-  #   id: build-number
-  #   attributes:
-  #     label: Current build number of the app
-  #     description: You can find the version number at the bottom of the user profile sheet, which can be opened by pressing the hamburger button at the top left corner of the screen.
-  #     placeholder: Enter app's current version number here
-  #   validations:
-  #     required: true
-  # - type: textarea
-  #   id: what-happened
-  #   attributes:
-  #     label: What happened?
-  #     description: Please provide a detailed description of what happened.
-  #     placeholder: Don't forget to also tell us what you expected to see
-  #   validations:
-  #     required: true
-  # - type: dropdown
-  #   id: os-version
-  #   attributes:
-  #     label: Operating System Version
-  #     description: "You can learn how to find your OS version here: https://support.google.com/android/answer/7680439".
-  #     options:
-  #       - 13 and newer
-  #       - 12 and older
-  #   validations:
-  #     required: true
-  # - type: textarea
-  #   id: device
-  #   attributes:
-  #     label: What is your device?
-  #     description: Please provide the make and model of your device. If unable, please do your best at describing the device.
-  #     placeholder: e.g., Google Pixel 7
-  #   validations:
-  #     required: true
-  # - type: textarea
-  #   id: additional
-  #   attributes:
-  #     label: Any additional comments?
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
