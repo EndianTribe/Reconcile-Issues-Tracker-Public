@@ -9,14 +9,16 @@ body:
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+  - type: checkboxes
+    id: latest-version-confirm
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: I can confirm that my app is running on the latest build.
+      description: "Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/".
+      options:
+        - label: I swear on pain of the creator's wrath that my app is running on the latest version.
+          required: true
     validations:
-      required: false
+      required: true
   # - type: textarea
   #   id: what-happened
   #   attributes:
