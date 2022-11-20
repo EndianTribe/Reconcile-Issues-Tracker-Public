@@ -5,52 +5,55 @@ labels: ["bug"]
 assignees:
   - EndianTribe
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
   - type: checkboxes
     id: latest-version-confirm
     attributes:
       label: I can confirm that my app is running on the latest build.
-      description: "Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/"
+      description: "Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/".
       options:
         - label: I swear on pain of the creator's wrath that my app is running on the latest version.
           required: true
     validations:
       required: true
-  - type: markdown
+  - type: textarea
+    id: build-number
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+      label: Current build number of the app
+      description: You can find the version number at the bottom of the user profile sheet, which can be opened by pressing the hamburger button at the top left corner of the screen.
+      placeholder: Enter app's current version number here
+    validations:
+      required: true
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      description: Please provide a detailed description of what happened.
+      placeholder: Don't forget to also tell us what you expected to see
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: os-version
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Operating System Version
+      description: "You can learn how to find your OS version here: https://support.google.com/android/answer/7680439".
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - 13 and newer
+        - 12 and older
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
-    id: logs
+    id: device
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      label: What is your device?
+      description: Please provide the make and model of your device. If unable, please do your best at describing the device.
+      placeholder: e.g., Google Pixel 7
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Any additional comments?
