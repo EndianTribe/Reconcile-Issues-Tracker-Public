@@ -5,20 +5,20 @@ labels: ["bug"]
 assignees:
   - EndianTribe
 body:
-  # - type: markdown
-  #   attributes:
-  #     value: |
-  #       Thanks for taking the time to fill out this bug report!
-  - type: checkboxes
-    id: latest-version-confirm
+  - type: markdown
     attributes:
-      label: I can confirm that my app is running on the latest build.
-      description: "Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/".
-      options:
-        - label: I swear on pain of the creator's wrath that my app is running on the latest version.
-          required: true
-    validations:
-      required: true
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  # - type: checkboxes
+  #   id: latest-version-confirm
+  #   attributes:
+  #     label: I can confirm that my app is running on the latest build.
+  #     description: "Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/".
+  #     options:
+  #       - label: I swear on pain of the creator's wrath that my app is running on the latest version.
+  #         required: true
+  #   validations:
+  #     required: true
   # - type: textarea
   #   id: build-number
   #   attributes:
