@@ -32,7 +32,7 @@ body:
     attributes:
       label: What happened?
       description: Please provide a detailed description of what happened.
-      placeholder: Don't forget to also tell us what you expected to see
+      placeholder: Don't forget to also tell us what you expected to see. You can also include screenshots here.
     validations:
       required: true
   - type: dropdown
