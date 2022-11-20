@@ -19,14 +19,14 @@ body:
           required: true
     validations:
       required: true
-  - type: textarea
-    id: build-number
-    attributes:
-      label: Current build number of the app
-      description: You can find the version number at the bottom of the user profile sheet, which can be opened by pressing the hamburger button at the top left corner of the screen.
-      placeholder: Enter app's current version number here
-    validations:
-      required: true
+  # - type: textarea
+  #   id: build-number
+  #   attributes:
+  #     label: Current build number of the app
+  #     description: You can find the version number at the bottom of the user profile sheet, which can be opened by pressing the hamburger button at the top left corner of the screen.
+  #     placeholder: Enter app's current version number here
+  #   validations:
+  #     required: true
   # - type: textarea
   #   id: what-happened
   #   attributes:
