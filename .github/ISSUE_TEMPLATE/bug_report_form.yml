@@ -1,10 +1,22 @@
 name: Bug Report
 description: File a bug report
-title: "[Bug]: "
+title: "[Bug]: PLEASE NAME THIS BUG"
 labels: ["bug"]
 assignees:
   - EndianTribe
 body:
+  - type: checkboxes
+    id: latest-version-confirm
+    attributes:
+      label: I can confirm that my app is running on the latest build.
+      description: Latest build number can be found here: https://reconcile.endiantribe.com/docs/under_the_hood/release-notes/
+      options:
+        - I swear on pain of the creator's wrath that my app is running on the latest version.
+    validations:
+      required: true
+
+
+
   - type: markdown
     attributes:
       value: |
