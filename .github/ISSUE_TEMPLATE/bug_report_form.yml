@@ -14,9 +14,6 @@ body:
         - I swear on pain of the creator's wrath that my app is running on the latest version.
     validations:
       required: true
-
-
-
   - type: markdown
     attributes:
       value: |
